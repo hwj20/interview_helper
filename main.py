@@ -104,7 +104,7 @@ def log_conversation(question, reply):
         log_file.write(f"[{timestamp}] question: {question}\n")
         log_file.write(f"[{timestamp}] answer: {reply}\n\n")
 
-pdf_content = "Not provided"
+cv_content = "Not provided"
 jd ="""
 Correkt is an AI startup based in Santa Barbara, California. We are looking for students currently pursuing a degree at the University of California, Santa Barbara to join us this summer as a full stack engineer intern. As a full stack engineer intern, you will work closely with the team in developing new, exciting features to our core products, and gain experience working in a modern codebase. 
 
@@ -146,7 +146,7 @@ def main():
             print("unresolved:"+text)
             return
         if role == 1:
-            reply = generate_reply(question=text,cv_content=pdf_content,job_description=jd)
+            reply = generate_reply(question=text, cv_content=cv_content, job_description=jd)
         else:
             reply = ""
         update_conversation_box(question=text,reply=reply,role=role)
@@ -157,13 +157,13 @@ def main():
         listener.stop_listening()
 
     def select_file():
-        global pdf_content
+        global cv_content
         file_path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
         if file_path:
-            pdf_content = read_pdf(file_path)
+            cv_content = read_pdf(file_path)
             # transcribed_label.config(text=f"PDF文件内容：{pdf_content}")
-            print(pdf_content)
-            print((len(pdf_content)))
+            print(cv_content)
+            print((len(cv_content)))
             conversation_box.insert(tk.END, f"Upload CV Successfully\n","system")
 
     # 创建GUI窗口
