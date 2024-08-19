@@ -1,6 +1,6 @@
 # Interview Helper
 
-This is an AI-powered interview helper, currently under development. Please ignore that the UI is still using tkinter, and some of the comments in the code are in Chinese. 
+This is an AI-powered interview helper, currently under development(actually in a mess).The UI is still using tkinter, and some of the comments in the code are in Chinese. 
 
 ## Requirements:
 - Python 3.11
