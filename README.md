@@ -16,5 +16,5 @@ This is an AI-powered interview helper, currently under development. Please igno
 **Note:** I'm actively working on connecting the system output to this helper.
 
 ## ScreenShots:
-On ./Screenshots
+On './Screenshots'
 
