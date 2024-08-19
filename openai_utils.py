@@ -3,9 +3,7 @@ import os
 import openai
 from openai import OpenAI
 
-api_key =  'sk-proj-grnX1j3w4Sk5TZHq4ElCT3BlbkFJtantkkLhYuztkJRyzg27'
-# 设置OpenAI API密钥
-# openai.api_key = 'sk-proj-grnX1j3w4Sk5TZHq4ElCT3BlbkFJtantkkLhYuztkJRyzg27'
+api_key =  'Your Openai Key'
 previous_answer = {}
 question_number = 0
 
@@ -51,7 +49,7 @@ def determine_type(content):
         return 3
     prompt = f"""
     You are reading selected words from an interviewing dialog. \
-    Return 0 if they are from applicant and 1 if there are any question from interviewer within them.
+    Return 0 if they are from applicant and 1 if they are any question from interviewer within them.
 """
     user_request = f"Determine whether these words are from answer of applicant or interviewer: {content}"
     try:
